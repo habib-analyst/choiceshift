@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "choiceshift"
+version = "0.1.0"
+description = "Measure how much an LLM's multiple-choice answers move when the options are reordered: permutation stability, position bias, and the accuracy range hidden inside a single benchmark number."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Habib Ur Rehman" },
+]
+keywords = [
+    "llm",
+    "evaluation",
+    "multiple-choice",
+    "robustness",
+    "position-bias",
+    "benchmarks",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "build>=1",
+]
+
+[project.urls]
+Homepage = "https://github.com/habib-analyst/choiceshift"
+Issues = "https://github.com/habib-analyst/choiceshift/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+choiceshift = ["py.typed"]
